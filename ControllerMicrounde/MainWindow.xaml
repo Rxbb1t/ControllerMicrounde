@@ -1,0 +1,105 @@
+﻿<Window 
+    x:Class="ControllerMicrounde.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Controller pentru microunde" 
+    Height="300" 
+    Width="400"
+    WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <ProgressBar 
+            x:Name="progressBarTimer" 
+            Grid.Row="0" 
+            Grid.ColumnSpan="2"
+            Height="25" 
+            Minimum="0" 
+            Maximum="10" 
+            Value="10"
+            Margin="0,0,0,20"/>
+
+        <Label 
+            x:Name="labelUsaStatus" 
+            Grid.Row="1" 
+            Grid.Column="0"
+            Content="Usa inchisa!" 
+            FontSize="14"
+            FontWeight="Bold"/>
+
+        <Button 
+            x:Name="btnInchideUsa" 
+            Grid.Row="1" 
+            Grid.Column="1"
+            Content="Inchide usa" 
+            Width="120" 
+            Height="30"
+            Margin="10,5"
+            Click="Inchide_usa_Click"/>
+
+        <Label 
+            x:Name="labelGatireStatus" 
+            Grid.Row="2" 
+            Grid.Column="0"
+            Content="Gateste OFF" 
+            FontSize="14"
+            FontWeight="Bold"/>
+
+        <Button 
+            x:Name="btnDeschideUsa" 
+            Grid.Row="2" 
+            Grid.Column="1"
+            Content="Deschide usa" 
+            Width="120" 
+            Height="30"
+            Margin="10,5"
+            Click="Deschide_usa_Click"/>
+
+        <Label 
+            x:Name="labelTimer" 
+            Grid.Row="3" 
+            Grid.Column="0"
+            Content="10" 
+            FontSize="24"
+            FontWeight="Bold"
+            Foreground="Blue"/>
+
+        <Button 
+            x:Name="btnPornit" 
+            Grid.Row="3" 
+            Grid.Column="1"
+            Content="Pornit" 
+            Width="120" 
+            Height="30"
+            Margin="10,5"
+            Click="Gateste_ON_Click"/>
+
+        <Border 
+            Grid.Row="4" 
+            Grid.ColumnSpan="2" 
+            Background="LightGray" 
+            Margin="0,15,0,0"
+            Padding="10">
+
+            <Label 
+                x:Name="labelStatus" 
+                Content="Cuptorul este pregatit." 
+                FontSize="12"
+                HorizontalAlignment="Center"/>
+        </Border>
+
+    </Grid>
+</Window>
